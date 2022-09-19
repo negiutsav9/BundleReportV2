@@ -1,0 +1,256 @@
+.dash-page{
+    background-color:rgb(221,0,0);
+    height: 100vh;
+    width: 100vw;
+}
+
+.Title{
+    color: whitesmoke;
+    position: relative;
+    text-align: left;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size:x-large;
+}
+
+.dash-area{
+    background-color: whitesmoke;
+    width:100vw;
+    height:90vh;
+
+}
+
+.dash-title{
+    color:black;
+    font-weight: 500;
+    position: absolute;
+    font-size:40px;
+    text-align: left;
+    margin-left: 4%;
+    padding-top: 1%;
+    top:7%;
+}
+
+.download-button{
+    background-color: rgb(221,0,0);
+    width:310px;
+    height:50px;
+    border-color: whitesmoke;
+    font-size: large;
+    color: whitesmoke;
+    position:absolute;
+    right:5%;
+    top:9%;
+    cursor:pointer;
+    transition: all 1s;
+}
+.download-button:hover{
+    font-size: larger;
+    transition: 1s;
+}
+
+.stat-type{
+    height: 20%;
+    width: 58%;
+    background-color: rgb(214, 214, 214, 0.25);
+    position: absolute;
+    cursor:pointer;
+    top:18%;
+    left:3%;
+    border-radius: 5%;
+}
+
+.type-header{
+    font-size: x-large;
+    text-align: left;
+    padding-left:2%;
+    padding-top:2%;
+    font-weight: 500;
+}
+
+.stat-crtype{
+    height: 40%;
+    width: 35%;
+    background-color: rgb(214, 214, 214, 0.25);
+    position: absolute;
+    bottom:4%;
+    right:2%;
+    border-radius: 5%;
+}
+
+.stat-project{
+    height: 35%;
+    width: 35%;
+    background-color: rgb(214, 214, 214, 0.25);
+    position: absolute;
+    top: 18%;
+    right:2%;
+    border-radius: 5%;
+}
+
+.stat-teams{
+    height:56%;
+    width: 58%;
+    background-color: rgba(214, 214, 214, 0.25);
+    position: absolute;
+    top:40%;
+    left:3%;
+    border-radius: 5%;
+}
+
+.incl-bundle {
+    width: 125px;
+    height: 125px;
+    background: whitesmoke;
+    border-radius: 50%;
+    border: 10px solid black;
+    position:absolute;
+    left:15%;
+    top:8%;
+    text-align: center;
+}
+
+.off-bundle {
+    width: 125px;
+    height: 125px;
+    background: whitesmoke;
+    border-radius: 50%;
+    border: 10px solid yellow;
+    position:absolute;
+    left:35%;
+    top:8%;
+    text-align: center;
+}
+
+.data {
+    width: 125px;
+    height: 125px;
+    background: whitesmoke;
+    border-radius: 50%;
+    border: 10px solid blueviolet;
+    position:absolute;
+    left:55%;
+    top:8%;
+    text-align: center;
+}
+
+.org-update{
+    width: 125px;
+    height: 125px;
+    background: whitesmoke;
+    border-radius: 50%;
+    border: 10px solid green;
+    position:absolute;
+    left:75%;
+    top:8%;
+    text-align: center;
+}
+
+.incl-num{
+    font-weight: 500;
+    font-size:xx-large;
+    text-align: center;
+    position: relative;
+    top:15%;
+}
+
+.off-num{
+    font-weight: 500;
+    font-size:xx-large;
+    text-align: center;
+    position: relative;
+    top:15%;
+}
+
+.data-num{
+    font-weight: 500;
+    font-size:xx-large;
+    text-align: center;
+    position: relative;
+    top:15%;
+}
+
+.org-num{
+    font-weight: 500;
+    font-size:xx-large;
+    text-align: center;
+    position: relative;
+    top:15%;
+}
+
+
+
+.incl-detail{
+    font-weight: 500;
+    font-size:large;
+    text-align: center;
+    position: relative;
+    top:25%;
+}
+
+.off-detail{
+    font-weight: 500;
+    font-size:large;
+    text-align: center;
+    position: relative;
+    top:25%;
+}
+
+.data-detail{
+    font-weight: 500;
+    font-size:large;
+    text-align: center;
+    position: relative;
+    top:25%;
+}
+
+.org-detail{
+    font-weight: 500;
+    font-size:large;
+    text-align: center;
+    position: relative;
+    top:20%;
+}
+
+
+.chart-teams{
+    position:absolute;
+    width: 55%;
+    top:45%;
+    left:5%;    
+}
+
+.chart-category{
+    position:absolute;
+    width: 350px;
+    right:8%;
+    top:15%;
+}
+
+.chart-type{
+    position: absolute;
+    width:525px;
+    right:2.5%;
+    bottom: 5%;
+}
+
+.upload-button{
+    background-color: rgb(221,0,0);
+    width:310px;
+    height:50px;
+    border-color: whitesmoke;
+    font-size: large;
+    color: whitesmoke;
+    position:absolute;
+    right:30%;
+    top:9%;
+    cursor:pointer;
+    transition: all 1s;
+}
+.upload-button:hover{
+    font-size: larger;
+    transition: 1s;
+}
