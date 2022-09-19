@@ -1,0 +1,18 @@
+- Adding Settings Menu to Add/Remove Bundle Dates
+    - Setting Icon from BootStrap
+    - On Clicking a SideBar shows up (React BootStrap can be useful)
+    - Option for changing bundle dates
+    - Redirect to bundle dates web page
+    - Web page shows the current bundle dates added in the system
+    - One add button to add dates
+    - Each date rows will have dates and others(...) option which will have edit and delete option
+    - On modify, change the state of the website for a pop out modify window requesting for a new date
+    - On delete, change the state of the website for a pop out to confirm the deletion
+    - On each changes, send a post request to server to remove/modify the dates stored in the bundle dates list
+
+- Create a Worksheet for Bundle Statistics
+    - Create pivot tables based on Bundle Status, Project V Ops and Category
+    - Based on pivot tables, create charts that are similar to the ones shown on Dashboard
+
+- Add the additional CR for same JIRA
+    
