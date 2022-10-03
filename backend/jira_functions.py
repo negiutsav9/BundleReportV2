@@ -102,8 +102,9 @@ def process_jira(jira_obj, row, bundle_status):
         hrqa_epqas_date = "-"
         comments = issues.fields.comment.comments
         for comment in comments:
-            if 'Team: HRS Migration' in comment.author.displayName and ('to HRQA / HRTRN is complete' in comment.body or 'EPQAS is complete' in comment.body):
+            if ('Team: HRS Migration' in comment.author.displayName or 'jira_doit' in comment.author.displayName) and ('to HRQA / HRTRN is complete' in comment.body or 'EPQAS is complete' in comment.body):
                 hrqa_epqas_date = comment.created[:10]
+                print(jira_code,hrqa_epqas_date)
         if bundle_status=='Org Dept Update':
             hrqa_epqas_date = 'N/A'
     except:
@@ -121,6 +122,8 @@ def process_jira(jira_obj, row, bundle_status):
 
     try:
         off_reason = issues.fields.customfield_11693.value if issues.fields.customfield_11693 is not None else "-"
+        if(bundle_status != 'Included in Bundle'):
+            off_reason = '-'
     except:
         off_reason = "-"
     
