@@ -15,4 +15,9 @@
     - Based on pivot tables, create charts that are similar to the ones shown on Dashboard
 
 - Add the additional CR for same JIRA
+
+- Bundle Dates
+    - Track the HRS Testing Outage Bundles with each run
+    - Update the dates with each run
+    
     

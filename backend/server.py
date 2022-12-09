@@ -29,7 +29,8 @@ bundle_dates = ["11/01/2021", "05/02/2021", "10/03/2021", "04/04/2021", "09/05/2
   "07/25/2021", "12/27/2021", "06/27/2021", "11/29/2021", "05/30/2021", "01/10/2022", "01/24/2022",
   "02/07/2022", "02/21/2022", "03/07/2022", "03/21/2022", "04/04/2022", "04/18/2022", "05/02/2022",
   "05/16/2022", "05/31/2022", "06/13/2022", "06/27/2022", "07/11/2022", "07/25/2022", "08/08/2022",
-  "08/22/2022", "09/06/2022", "09/23/2022"]
+  "08/22/2022", "09/06/2022", "09/23/2022", "10/03/2022", "10/17/2022", "10/31/2022", "11/13/2022",
+  "11/28/2022","12/12/2022"]
 
 jira_obj = JIRA(os.getenv("HOST_URL"),basic_auth=(os.getenv("JIRA_USER_ID"),os.getenv("JIRA_API_KEY")))
 
@@ -66,8 +67,8 @@ def processOrg(startDate, endDate, type):
 
 def processCSV(data, type):
     count = 0
-    #remove the headers 
-    data.pop(0)
+    #remove the headers
+    data.pop(0) #output for data.pop 
     df = pd.DataFrame(data,columns=['CR', 'Tracking #', 'Target DB', 'Migrated On', 'Migrated By', 'CR Type'])
     #removing testing data
     if 'TEST' in df.values:
@@ -76,7 +77,7 @@ def processCSV(data, type):
     #segregating bundle data into lists based on on-bundle, off-bundle, data update
     total_count = df.shape[0]
     for index, row in df.iterrows():
-        #print(row["Tracking #"])
+        print(jira_obj.issue(row["Tracking #"]))
         if row["Migrated On"].split(" ")[0] in bundle_dates:
             result = process_jira(jira_obj, row, "Included in Bundle")
             if(result == None):
