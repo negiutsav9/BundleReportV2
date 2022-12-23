@@ -26,4 +26,4 @@ bundle-env
 
 ./backend/*.xlsx
 ./backend/.env
-./backend/__pycache__
+./backend/__pycache__/*
