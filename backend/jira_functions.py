@@ -2,6 +2,7 @@ from table_classes import bundle_rows
 import xlsxwriter
 import pandas as pd
 from io import BytesIO
+from datetime import datetime
 
 bundle_header = ["JIRA #", "Summary", "Team", "Bundle Status", "JIRA Status", "Assignee",
  "Reporter", "Priority", "Sub-Priority", "Category", "Prioritization Date", "HRS/EPM", "HRQA/EPQAS Date",
@@ -88,7 +89,9 @@ def process_jira(jira_obj, row, bundle_status):
         category = "-"
 
     try:
-        priortization_date = issues.fields.customfield_13090 if issues.fields.customfield_13090 is not None else "-"
+        priortization_date_string = issues.fields.customfield_13090 if issues.fields.customfield_13090 is not None else "-"
+        priortization_date_obj = datetime.strptime(priortization_date_string, "%Y-%m-%d")
+        priortization_date = priortization_date_obj.strftime("%m/%d/%Y")
     except:
         priortization_date = '-'
     
@@ -102,7 +105,9 @@ def process_jira(jira_obj, row, bundle_status):
         comments = issues.fields.comment.comments
         for comment in comments:
             if ('Team: HRS Migration' in comment.author.displayName or 'jira_doit' in comment.author.displayName) and ('to HRQA / HRTRN is complete' in comment.body or 'EPQAS is complete' in comment.body):
-                hrqa_epqas_date = comment.created[:10]
+                hrqa_epqas_date_string = comment.created[:10]
+                hrqa_epqas_date_obj = datetime.strptime(hrqa_epqas_date_string, '%Y-%m-%d')
+                hrqa_epqas_date = hrqa_epqas_date_obj.strftime('%m/%d/%Y')
                 print(jira_code,hrqa_epqas_date)
         if bundle_status=='Org Dept Update':
             hrqa_epqas_date = 'N/A'
